@@ -27,9 +27,12 @@ public class WeatherAPIController {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> getCityInfo() {
-
-        return new ResponseEntity<>("200 OK", HttpStatus.OK);
+    public ResponseEntity<?> getCityInfo(@RequestParam String city) {
+        String stats = weatherStatService.getCityStats(city);
+        if(stats.equals(WeatherStatService.FAILED)){
+            return new ResponseEntity<>("400 OK", HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(stats, HttpStatus.OK);
 
     }
 

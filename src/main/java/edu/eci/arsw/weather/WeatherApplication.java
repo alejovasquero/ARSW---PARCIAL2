@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author cristian
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {"edu.eci.arsw.cinema"})
+@ComponentScan(basePackages = {"edu.eci.arsw.weather"})
 public class WeatherApplication {
 
     public static void main(String[] args) {
