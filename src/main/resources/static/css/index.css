@@ -1,0 +1,21 @@
+.grid-item.admin {
+    border-style: solid;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-item.console {
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-item.admin H2{
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
