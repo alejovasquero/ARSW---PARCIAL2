@@ -19,8 +19,10 @@ public class WeatherStatServiceImpl implements WeatherStatService {
     private HashMap<String, String> cache = new HashMap<String, String>();
 
     public String getCityStats(String city){
+        System.out.println(cache.containsKey(city));
         if(!cache.containsKey(city)){
             try {
+                System.out.println("CONSULTING");
                 String stats = weatherConnectionService.getCityStats(city);
                 if(stats.equals(WeatherConnectionService.FAILED)){
                     return FAILED;
@@ -29,6 +31,7 @@ public class WeatherStatServiceImpl implements WeatherStatService {
                     return stats;
                 }
             } catch (IOException e) {
+                e.printStackTrace();
                 return WeatherConnectionService.FAILED;
             }
         } else {

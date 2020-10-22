@@ -30,7 +30,7 @@ public class WeatherAPIController {
     public ResponseEntity<?> getCityInfo(@RequestParam String city) {
         String stats = weatherStatService.getCityStats(city);
         if(stats.equals(WeatherStatService.FAILED)){
-            return new ResponseEntity<>("400 OK", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("400 BAD REQUEST", HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(stats, HttpStatus.OK);
 
