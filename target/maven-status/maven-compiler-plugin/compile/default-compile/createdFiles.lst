@@ -1,0 +1,5 @@
+edu\eci\arsw\weather\controllers\WeatherAPIController.class
+edu\eci\arsw\weather\services\impl\WeatherStatServiceImpl.class
+edu\eci\arsw\weather\WeatherApplication.class
+edu\eci\arsw\weather\CinemaWebSocketConfig.class
+edu\eci\arsw\weather\services\WeatherStatService.class
